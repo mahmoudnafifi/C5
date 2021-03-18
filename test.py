@@ -101,7 +101,6 @@ def test_net(net, device, dir_img, batch_size=64, input_size=64, data_num=7,
   with torch.no_grad():
     for test_i in range(number_of_tests):
       results = np.zeros((len(test), 3))  # to store estimated illuminant values
-      angular_errors = np.zeros((len(test)))  # to store angular errors
       gt = np.zeros((len(test), 3))  # to store ground-truth illuminant colors
       index = 0
 
@@ -122,8 +121,6 @@ def test_net(net, device, dir_img, batch_size=64, input_size=64, data_num=7,
 
         predicted_ill, _, _, _, _ = net(histogram, model_in_N=model_histogram)
 
-        a_error = ops.angular_loss(predicted_ill, gt_ill, shrink=False)
-
         if white_balance and test_i == 0:
           bs = image.shape[0]
           for c in range(3):
@@ -140,7 +137,6 @@ def test_net(net, device, dir_img, batch_size=64, input_size=64, data_num=7,
         results[index:index + L, :] = predicted_ill.cpu().numpy()
         gt[index:index + L, :] = gt_ill.cpu().numpy()
 
-        angular_errors[index:index + L] = a_error.cpu().numpy()
         index = index + L
 
       if save_output:
@@ -154,13 +150,9 @@ def test_net(net, device, dir_img, batch_size=64, input_size=64, data_num=7,
           savemat(os.path.join(save_dir, f'gt_{test_i + 1}.mat'), {'gt': gt})
           savemat(os.path.join(save_dir, f'results_{test_i + 1}.mat'),
                   {'predicted': results})
-          savemat(os.path.join(save_dir, f'error_{test_i + 1}.mat'),
-                  {'error': angular_errors})
         else:
           savemat(os.path.join(save_dir, 'gt.mat'), {'gt': gt})
           savemat(os.path.join(save_dir, 'results.mat'), {'predicted': results})
-          savemat(os.path.join(save_dir, 'error.mat'),
-                  {'error': angular_errors})
 
   logging.info('End of testing')
 
