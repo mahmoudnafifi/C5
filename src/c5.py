@@ -160,9 +160,9 @@ class network(nn.Module):
                                onesided=False)
 
     # uncomment this part if torch 1.8 or higher is used.
-    # N_fft = fft.rfft(N[:, :2, :, :])
-    # F_fft = fft.rfft(F)
-    # N_after_conv = fft.irfft(N_fft * F_fft)
+    # N_fft = fft.rfft2(N[:, :2, :, :])
+    # F_fft = fft.rfft2(F)
+    # N_after_conv = fft.irfft2(N_fft * F_fft)
 
 
 
