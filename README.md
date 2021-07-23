@@ -1,4 +1,4 @@
-# Cross-Camera Convolutional Color Constancy
+# Cross-Camera Convolutional Color Constancy, ICCV 2021 (Oral)
 
 *[Mahmoud Afifi](https://sites.google.com/view/mafifi)*<sup>1,2</sup>, *[Jonathan T. Barron](https://jonbarron.info/)*<sup>2</sup>, *[Chloe LeGendre](http://www.chloelegendre.com/)*<sup>2</sup>, *[Yun-Ta Tsai](https://scholar.google.com/citations?user=7fUcF9UAAAAJ&hl=en)*<sup>2</sup>, and *[Francois Bleibel](https://www.linkedin.com/in/fbleibel)*<sup>2</sup>
 
