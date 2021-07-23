@@ -10,13 +10,13 @@
 ![C5_teaser](https://user-images.githubusercontent.com/37669469/103726597-4de63f80-4fa7-11eb-851a-7c35b38d8806.gif)
 
 
-Reference code for the paper [Cross-Camera Convolutional Color Constancy.](https://arxiv.org/pdf/2011.11890.pdf) Mahmoud Afifi, Jonathan T. Barron, Chloe LeGendre, Yun-Ta Tsai, and Francois Bleibel. arXiv preprint arXiv:2011.11890, 2020. If you use this code, please cite our paper:
+Reference code for the paper [Cross-Camera Convolutional Color Constancy.](https://arxiv.org/pdf/2011.11890.pdf) Mahmoud Afifi, Jonathan T. Barron, Chloe LeGendre, Yun-Ta Tsai, and Francois Bleibel. In ICCV, 2021. If you use this code, please cite our paper:
 ```
-@article{afifi2020cross,
+@InProceedings{C5,
   title={Cross-Camera Convolutional Color Constancy},
   author={Afifi, Mahmoud and Barron, Jonathan T and LeGendre, Chloe and Tsai, Yun-Ta and Bleibel, Francois},
-  journal={arXiv preprint arXiv:2011.11890},
-  year={2020}
+  booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+  year={2021}
 }
 ```
 
