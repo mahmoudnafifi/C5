@@ -100,6 +100,18 @@ The testing code is given in `test.py`. The following parameters are required to
   * `--cross-validation`: to use three-fold cross-validation. When it is set to `True`, it is supposed to have three pre-trained models saved with a postfix of the fold number. The testing image filenames should be listed in .npy files located in the `folds` directory with the same name of the dataset, which should be the same as the folder name in `--testing-dir-in`. 
   * `--gpu`: GPU device ID. 
 
+In the `images` directory, there are few examples captured by Mobile Sony IMX135 from the [INTEL-TAU](https://etsin.fairdata.fi/dataset/f0570a3f-3d77-4f44-9ef1-99ab4878f17c) dataset. To white balance these raw images, as shown in the figure below, using a C5 model (trained on DSLR cameras from [NUS](http://cvil.eecs.yorku.ca/projects/public_html/illuminant/illuminant.html) and [Gehler-Shi](https://www2.cs.sfu.ca/~colour/data/shi_gehler/) datasets), use the following command:
+
+`python test.py --testing-dir-in ./images --white-balance True --model-name C5_m_7_h_64`
+
+  
+ ![c5_examples](https://user-images.githubusercontent.com/37669469/128657485-b93e47b5-c52d-46a3-86b7-0cdd771084bc.jpg)
+ 
+ To test with the gain multiplie, use the following command:
+ 
+ `python test.py --testing-dir-in ./images --white-balance True --g-multiplier True --model-name C5_m_7_h_64_w_G`
+ 
+  
   
 
 #### Data augmentation
