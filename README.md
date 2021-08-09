@@ -112,7 +112,8 @@ In the `images` directory, there are few examples captured by Mobile Sony IMX135
  `python test.py --testing-dir-in ./images --white-balance True --g-multiplier True --model-name C5_m_7_h_64_w_G`
  
   
-  
+Note that in testing, C5 does not require any metadata. The testing code only uses JSON files to load ground-truth illumination for comparisons with our estimated values.
+
 
 #### Data augmentation
 The raw-to-raw augmentation functions are provided in `src/aug_ops.opy`. Call the `set_sampling_params` function to set sampling parameters (e.g., excluding certain camera/dataset from the soruce set, determine the number of augmented images, etc.). Then, call the `map_raw_images` function to generate a new augmentation set with the determined parameters. The function `map_raw_images` takes four arguments:
