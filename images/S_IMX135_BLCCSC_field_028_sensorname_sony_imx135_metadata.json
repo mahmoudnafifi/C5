@@ -1,1 +1,1 @@
-{"model":"Sony IMX135","ISO":[],"baseline_exposure":[],"aperture":2.4,"exposure_time":0.057541,"color_temp":[],"raw2xyz":[],"xyz2raw":[],"illuminant_color_raw":[0.42790988512414063,0.76176087403506021,0.48642933813904149],"illuminant_color_xyz":[],"dataset":"INTEL-TAU","extra":"field_1_cameras","rotated":0,"analog_gain":9.481482,"baseline_noise":1}
+{"illuminant_color_raw":[0.42790988512414063,0.76176087403506021,0.48642933813904149]}
