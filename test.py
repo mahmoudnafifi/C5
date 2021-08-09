@@ -181,7 +181,7 @@ def get_args():
   parser.add_argument('-lg', '--g-multiplier', type=bool, default=False,
                       help='Have a G multiplier', dest='g_multiplier')
 
-  parser.add_argument('-mt', '--multiple_test', type=bool, default=True,
+  parser.add_argument('-mt', '--multiple_test', type=bool, default=False,
                       help='do 10 tests and save the results',
                       dest='multiple_test')
 
