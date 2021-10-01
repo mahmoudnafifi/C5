@@ -2,10 +2,10 @@
 
 *[Mahmoud Afifi](https://sites.google.com/view/mafifi)*<sup>1,2</sup>, *[Jonathan T. Barron](https://jonbarron.info/)*<sup>2</sup>, *[Chloe LeGendre](http://www.chloelegendre.com/)*<sup>2</sup>, *[Yun-Ta Tsai](https://scholar.google.com/citations?user=7fUcF9UAAAAJ&hl=en)*<sup>2</sup>, and *[Francois Bleibel](https://www.linkedin.com/in/fbleibel)*<sup>2</sup>
 
-<sup>1</sup>York University
+<sup>1</sup>York University  &ensp; <sup>2</sup>Google Research
 
-<sup>2</sup>Google Research
 
+[Paper](https://arxiv.org/pdf/2011.11890.pdf) | [Poster](https://drive.google.com/file/d/1j3FyeZpoGv638qGslARCEv3ue4Wt-38y/view) | [PPT](https://docs.google.com/presentation/d/1MTidjeFEwvoOBNAYgC3r8P9y60Axej0f/edit?rtpof=true&sd=true) | [Video](https://www.youtube.com/watch?v=BFYhbxo9jK8)
 
 ![C5_teaser](https://user-images.githubusercontent.com/37669469/103726597-4de63f80-4fa7-11eb-851a-7c35b38d8806.gif)
 
