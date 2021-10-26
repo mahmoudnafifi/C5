@@ -102,6 +102,7 @@ def test_net(net, device, dir_img, batch_size=64, input_size=64, data_num=7,
     for test_i in range(number_of_tests):
       results = np.zeros((len(test), 3))  # to store estimated illuminant values
       gt = np.zeros((len(test), 3))  # to store ground-truth illuminant colors
+      filenames = []  # to store filenames
       index = 0
 
       for batch in test_loader:
@@ -136,7 +137,8 @@ def test_net(net, device, dir_img, batch_size=64, input_size=64, data_num=7,
         L = len(predicted_ill)
         results[index:index + L, :] = predicted_ill.cpu().numpy()
         gt[index:index + L, :] = gt_ill.cpu().numpy()
-
+        for f in file_names:
+            filenames.append(f)
         index = index + L
 
       if save_output:
@@ -151,11 +153,11 @@ def test_net(net, device, dir_img, batch_size=64, input_size=64, data_num=7,
           savemat(os.path.join(save_dir, f'results_{test_i + 1}.mat'),
                   {'predicted': results})
           savemat(os.path.join(save_dir, f'filenames_{test_i + 1}.mat'),
-                  {'filenames': file_names})
+                  {'filenames': filenames})
         else:
           savemat(os.path.join(save_dir, 'gt.mat'), {'gt': gt})
           savemat(os.path.join(save_dir, 'results.mat'), {'predicted': results})
-          savemat(os.path.join(save_dir, 'filenames.mat'), {'filenames': file_names})
+          savemat(os.path.join(save_dir, 'filenames.mat'), {'filenames': filenames})
 
   logging.info('End of testing')
 
