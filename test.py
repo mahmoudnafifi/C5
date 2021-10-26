@@ -150,9 +150,12 @@ def test_net(net, device, dir_img, batch_size=64, input_size=64, data_num=7,
           savemat(os.path.join(save_dir, f'gt_{test_i + 1}.mat'), {'gt': gt})
           savemat(os.path.join(save_dir, f'results_{test_i + 1}.mat'),
                   {'predicted': results})
+          savemat(os.path.join(save_dir, f'filenames_{test_i + 1}.mat'),
+                  {'filenames': file_names})
         else:
           savemat(os.path.join(save_dir, 'gt.mat'), {'gt': gt})
           savemat(os.path.join(save_dir, 'results.mat'), {'predicted': results})
+          savemat(os.path.join(save_dir, 'filenames.mat'), {'filenames': file_names})
 
   logging.info('End of testing')
 
