@@ -109,10 +109,12 @@ def test_net(net, device, dir_img, batch_size=64, input_size=64, data_num=7,
         model_histogram = batch['model_input_histograms']
         model_histogram = model_histogram.to(device=device,
                                              dtype=torch.float32)
+        file_names = batch['file_name']
+        
         if white_balance:
           image = batch['image_rgb']
           image = image.to(device=device, dtype=torch.float32)
-          file_names = batch['file_name']
+
 
         histogram = batch['histogram']
         histogram = histogram.to(device=device, dtype=torch.float32)
