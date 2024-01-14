@@ -28,8 +28,8 @@ def error_metrics(errors):
   median = percentiles[1]
   tri = np.sum(percentiles[0:3] * np.array([1, 2, 1])) / 4
   b25 = np.mean(errors[np.argwhere(np.squeeze(errors) <= percentiles[0])])
-  w25 = np.mean(errors[np.argwhere(np.squeeze(errors) <= percentiles[2])])
-  w05 = np.mean(errors[np.argwhere(np.squeeze(errors) <= percentiles[3])])
+  w25 = np.mean(errors[np.argwhere(np.squeeze(errors) >= percentiles[2])])
+  w05 = np.mean(errors[np.argwhere(np.squeeze(errors) >= percentiles[3])])
   max = np.max(errors)
 
   return {
